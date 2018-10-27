@@ -50,7 +50,7 @@ while ( 1 ):
         						print ( str (year ) + "." + str( mon ) + "." + str("1") )
 
        	if ( mon == 2):
-       			if (year_counter != 4 ):
+       			if (year_counter != 4 ) or ( year_counter == 4 and year % 400 != 0 ):
        					day = day + 28 - 28
        					if day > 0:
         						mon+=1
@@ -61,7 +61,7 @@ while ( 1 ):
         						mon+=1
         						if( day % 7 == 1):
         								print ( str (year ) + "." + str( mon ) + "." + str("1") )
-       			else:
+       			elif (year_counter == 4 and year % 400 == 0 ):
        					day = day + 28 - 29
        					if day > 0:
         						mon+=1
